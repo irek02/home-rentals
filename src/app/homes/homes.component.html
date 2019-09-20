@@ -1,3 +1,7 @@
 <div class="uk-container uk-padding">
   <h1>Homes</h1>
+
+  <div *ngFor="let home of homes | async">
+    {{ home.title }}
+  </div>
 </div>

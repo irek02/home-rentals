@@ -1,0 +1,74 @@
+[
+  {
+    "image_url": "assets/listing2.jpeg",
+    "type": "Private room",
+    "location": "New York",
+    "title": "Charming gardenroom with woodstove"
+  },
+  {
+    "image_url": "assets/listing3.jpeg",
+    "type": "Private room",
+    "location": "New York",
+    "title": "Brownstone Studio"
+  },
+  {
+    "image_url": "assets/listing.jpg",
+    "type": "Hotel room",
+    "location": "San Francisco",
+    "title": "Charming gardenroom with woodstove"
+  },
+  {
+    "image_url": "assets/listing2.jpeg",
+    "type": "Private room",
+    "location": "New York",
+    "title": "Brownstone Studio"
+  },
+  {
+    "image_url": "assets/listing3.jpeg",
+    "type": "Private room",
+    "location": "San Francisco",
+    "title": "Superb duplex apartment in the historical centre"
+  },
+  {
+    "image_url": "assets/listing2.jpeg",
+    "type": "Tree house",
+    "location": "Boston",
+    "title": "Brownstone Studio"
+  },
+  {
+    "image_url": "assets/listing2.jpeg",
+    "type": "Private room",
+    "location": "San Francisco",
+    "title": "Brownstone Studio"
+  },
+  {
+    "image_url": "assets/listing2.jpeg",
+    "type": "Hotel room",
+    "location": "New York",
+    "title": "Brownstone Studio"
+  },
+  {
+    "image_url": "assets/listing4.jpeg",
+    "type": "Entire apartment",
+    "location": "New York",
+    "title": "Superb duplex apartment in the historical centre"
+  },
+  {
+    "image_url": "assets/listing4.jpeg",
+    "type": "Private room",
+    "location": "Boston",
+    "title": "Brownstone Studio"
+  },
+  {
+    "image_url": "assets/listing2.jpeg",
+    "type": "Hotel room",
+    "location": "San Francisco",
+    "title": "Brownstone Studio"
+  },
+  {
+    "image_url": "assets/listing4.jpeg",
+    "type": "Entire apartment",
+    "location": "New York",
+    "title": "Superb duplex apartment in the historical centre"
+  }
+]
