@@ -2,6 +2,27 @@
 
   <h1>Homes</h1>
 
+  <div
+    class="uk-flex uk-flex-nowrap uk-grid-small uk-margin">
+    <div>
+      <button
+        class="uk-button uk-button-default uk-button-small uk-text-nowrap">
+        Home type
+      </button>
+      <div *ngIf="false"
+        class="uk-width-medium uk-dropdown uk-open uk-dropdown-bottom-left">
+      </div>
+    </div>
+    <div>
+      <button
+        class="uk-button uk-button-default uk-button-small uk-text-nowrap">Dates</button>
+    </div>
+    <div>
+      <button
+        class="uk-button uk-button-default uk-button-small uk-text-nowrap">Guests</button>
+    </div>
+  </div>
+
   <ng-container
     *ngIf="(homes$ | async) as homes; else loading">
 
