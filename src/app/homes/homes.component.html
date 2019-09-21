@@ -6,11 +6,15 @@
     class="uk-flex uk-flex-nowrap uk-grid-small uk-margin">
     <div>
       <button
+        (click)="homeTypeDropdownOpen = !homeTypeDropdownOpen"
         class="uk-button uk-button-default uk-button-small uk-text-nowrap">
         Home type
       </button>
-      <div *ngIf="false"
+      <div *ngIf="homeTypeDropdownOpen"
         class="uk-width-medium uk-dropdown uk-open uk-dropdown-bottom-left">
+        <app-home-type-filter
+          (applied)="homeTypeFilterApplied($event)">
+        </app-home-type-filter>
       </div>
     </div>
     <div>
