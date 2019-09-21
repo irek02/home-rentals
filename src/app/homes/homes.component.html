@@ -1,7 +1,21 @@
 <div class="uk-container uk-padding">
+
   <h1>Homes</h1>
 
-  <div *ngFor="let home of homes | async">
-    {{ home.title }}
-  </div>
+  <ng-container
+    *ngIf="(homes$ | async) as homes; else loading">
+
+    <div *ngFor="let home of homes">
+      {{ home.title }}
+    </div>
+
+  </ng-container>
+
+  <ng-template #loading>
+
+    <div uk-spinner class="uk-align-center uk-text-center">
+    </div>
+
+  </ng-template>
+
 </div>

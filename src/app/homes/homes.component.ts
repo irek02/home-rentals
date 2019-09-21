@@ -7,7 +7,7 @@ import { DataService } from '../data.service';
 })
 export class HomesComponent implements OnInit {
 
-  homes = this.dataService.getHomes();
+  homes$ = this.dataService.getHomes();
 
   constructor(private dataService: DataService) { }
 
