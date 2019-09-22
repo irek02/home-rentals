@@ -19,6 +19,9 @@ export class DataService {
     return this.httpClient.get<any[]>('assets/homes.json').pipe(
       delay(2000),
       map(homes => {
+        if (!homeTypeFilters.length) {
+          return homes;
+        }
         return homes.filter(home => homeTypeFilters.includes(home.type));
       })
     ).subscribe(homes => this.homes$.next(homes));

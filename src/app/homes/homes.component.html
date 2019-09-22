@@ -8,6 +8,7 @@
     <div>
       <button
         (click)="homeTypeDropdownOpen = !homeTypeDropdownOpen"
+        [ngClass]="{ 'uk-button-primary': currentHomeTypeFilters.length > 0 }"
         class="uk-button uk-button-default uk-button-small uk-text-nowrap">
         Home type
       </button>
