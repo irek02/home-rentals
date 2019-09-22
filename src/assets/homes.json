@@ -1,72 +1,60 @@
 [
   {
-    "image_url": "assets/listing2.jpeg",
-    "type": "Room",
-    "location": "New York",
-    "title": "Charming gardenroom with woodstove"
-  },
-  {
-    "image_url": "assets/listing4.jpeg",
+    "image_url": "https://images.unsplash.com/photo-1460317442991-0ec209397118",
     "type": "Apartment",
     "location": "New York",
     "title": "Superb duplex apartment in the historical centre"
   },
   {
-    "image_url": "assets/listing3.jpeg",
-    "type": "Room",
-    "location": "New York",
-    "title": "Brownstone Studio"
-  },
-  {
-    "image_url": "assets/listing.jpg",
+    "image_url": "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09",
     "type": "House",
     "location": "San Francisco",
     "title": "Charming gardenroom with woodstove"
   },
   {
-    "image_url": "assets/listing2.jpeg",
+    "image_url": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af",
     "type": "Room",
     "location": "New York",
     "title": "Brownstone Studio"
   },
   {
-    "image_url": "assets/listing3.jpeg",
+    "image_url": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af",
     "type": "Room",
     "location": "San Francisco",
     "title": "Superb duplex apartment in the historical centre"
   },
   {
-    "image_url": "assets/listing2.jpeg",
+    "image_url": "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09",
     "type": "House",
     "location": "Boston",
     "title": "Brownstone Studio"
   },
   {
-    "image_url": "assets/listing2.jpeg",
+    "image_url": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af",
     "type": "Room",
     "location": "San Francisco",
     "title": "Brownstone Studio"
   },
   {
-    "image_url": "assets/listing2.jpeg",
+    "image_url": "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09",
     "type": "House",
     "location": "New York",
     "title": "Brownstone Studio"
   },
   {
-    "image_url": "assets/listing4.jpeg",
+    "image_url": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af",
     "type": "Room",
     "location": "Boston",
     "title": "Brownstone Studio"
   },
   {
-    "image_url": "assets/listing2.jpeg",
+    "image_url": "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09",
     "type": "House",
     "location": "San Francisco",
     "title": "Brownstone Studio"
   },
   {
-    "image_url": "assets/listing4.jpeg",
+    "image_url": "https://images.unsplash.com/photo-1460317442991-0ec209397118",
     "type": "Apartment",
     "location": "New York",
     "title": "Superb duplex apartment in the historical centre"
