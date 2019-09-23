@@ -1,0 +1,36 @@
+<div class="uk-container uk-padding">
+
+  <h1>Homes</h1>
+
+  <ng-container
+    *ngIf="(homes$ | async) as homes; else loading">
+
+    <div class="uk-grid-match uk-child-width-1-3@s" uk-grid>
+
+      <ng-container *ngFor="let home of homes">
+        <div class="uk-card">
+          <div class="uk-card-media-top">
+            <img src="{{ home.image_url }}"
+              class="uk-border-rounded" />
+          </div>
+          <div class="uk-card-body uk-padding-remove">
+            <div
+              class="uk-text-muted uk-text-uppercase uk-text-small uk-text-bold uk-text-truncate">
+              {{ home.type }} / {{ home.location }}
+            </div>
+            <div class="uk-text-bold">
+              {{ home.title }}
+            </div>
+          </div>
+        </div>
+      </ng-container>
+
+    </div>
+
+  </ng-container>
+
+  <ng-template #loading>
+    <div uk-spinner></div>
+  </ng-template>
+
+</div>
