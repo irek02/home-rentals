@@ -4,11 +4,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomesComponent } from './homes/homes.component';
+import { HomeTypeFilterComponent } from './home-type-filter/home-type-filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomesComponent
+    HomesComponent,
+    HomeTypeFilterComponent
   ],
   imports: [
     BrowserModule,
