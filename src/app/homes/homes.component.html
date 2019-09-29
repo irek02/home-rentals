@@ -5,9 +5,14 @@
   <div class="uk-flex uk-grid-small uk-margin">
     <div>
       <button
+        (click)="homeTypeDropdownOpen = !homeTypeDropdownOpen"
         class="uk-button uk-button-default uk-button-small uk-text-nowrap">
         Home type
       </button>
+      <div *ngIf="homeTypeDropdownOpen"
+        class="uk-dropdown uk-open uk-width-medium">
+        Dropdown!
+      </div>
     </div>
     <div>
       <button
