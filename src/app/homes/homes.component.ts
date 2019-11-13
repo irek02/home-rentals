@@ -26,13 +26,18 @@ export class HomesComponent implements OnInit {
       this.currentHomeTypeFilters = homeTypeFilters;
     });
 
-
   }
 
   homeTypeFilterApplied($event) {
 
     this.homeTypeDropdownOpen = false;
     this.router.navigate(['homes'], { queryParams: { 'home-type': $event } });
+
+  }
+
+  searchApplied($event) {
+
+    this.router.navigate(['homes'], { queryParams: { search: $event } });
 
   }
 
