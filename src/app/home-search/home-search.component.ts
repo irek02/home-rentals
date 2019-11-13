@@ -16,4 +16,8 @@ export class HomeSearchComponent implements OnInit {
 
   }
 
+  onChange(str) {
+
+  }
+
 }

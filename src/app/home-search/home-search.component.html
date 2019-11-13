@@ -1,8 +1,8 @@
 <div class="uk-margin">
   <form class="uk-search uk-search-default">
-    <span uk-search-icon class="uk-text-small"></span>
-    <!-- <span uk-icon="icon: search; ratio: 1"></span> -->
+    <span uk-search-icon></span>
     <input class="uk-search-input" type="search"
+      (change)="onChange($event.target.value)"
       placeholder="Search...">
   </form>
 </div>
