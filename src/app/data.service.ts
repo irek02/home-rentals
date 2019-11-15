@@ -8,13 +8,13 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class DataService {
 
-  homes$ = new BehaviorSubject([]);
+  homes$ = new BehaviorSubject({ loading: true, data: [] });
 
   constructor(private httpClient: HttpClient) { }
 
-  loadHomes(homeTypeFilters) {
+  loadHomes(homeTypeFilters, search) {
 
-    this.homes$.next([]);
+    this.homes$.next({ loading: true, data: [] });
 
     this.httpClient.get<any[]>('assets/homes.json')
       .pipe(
@@ -25,10 +25,17 @@ export class DataService {
             return homes;
           }
           return homes.filter(home => homeTypeFilters.includes(home.type));
+        }),
+        // Search homes on client side.
+        map(homes => {
+          if (!search) {
+            return homes;
+          }
+          return homes.filter(home => home.title.toLowerCase().includes(search.toLowerCase()));
         })
       )
       .subscribe(homes => {
-        this.homes$.next(homes);
+        this.homes$.next({ loading: false, data: homes });
       });
 
   }

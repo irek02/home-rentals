@@ -33,19 +33,24 @@
   </div>
 
   <!-- Search -->
-  <app-home-search (applied)="searchApplied($event)">
+  <app-home-search [defaultSearch]="currentSearch"
+    (applied)="searchApplied($event)">
   </app-home-search>
 
   <!-- Home list with loader -->
   <div *ngIf="(homes$ | async) as homes">
 
-    <ng-container *ngIf="homes.length == 0">
+    <ng-container *ngIf="homes.loading">
       <div uk-spinner="ratio: 3"
         class="uk-align-center uk-text-center"></div>
     </ng-container>
 
+    <div *ngIf="!homes.loading && homes.data.length === 0">
+      No homes found
+    </div>
+
     <div class="uk-grid-match uk-child-width-1-3@s" uk-grid>
-      <div *ngFor="let home of homes">
+      <div *ngFor="let home of homes.data">
         <div class="uk-card">
           <div class="uk-card-media-top">
             <img src="{{ home.image_url }}">
