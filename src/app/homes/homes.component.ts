@@ -36,9 +36,9 @@ export class HomesComponent implements OnInit {
     this.homeTypeDropdownOpen = false;
 
     const params = this.route.snapshot.queryParams;
-    const search = { 'home-type': $event };
+    const homeType = { 'home-type': $event };
 
-    this.router.navigate(['homes'], { queryParams: { ...params, ...search } });
+    this.router.navigate(['homes'], { queryParams: { ...params, ...homeType } });
 
   }
 
