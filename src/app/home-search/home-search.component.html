@@ -1,7 +1,8 @@
 <div class="uk-margin">
-  <form class="uk-search uk-search-default uk-width-medium">
+  <form class="uk-search uk-search-default uk-width-medium"
+    [formGroup]="form">
     <span uk-search-icon></span>
     <input class="uk-search-input" type="search"
-      placeholder="Search...">
+      placeholder="Search..." [formControlName]="'search'">
   </form>
 </div>
