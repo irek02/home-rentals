@@ -32,7 +32,8 @@
     </div>
   </div>
 
-  <app-home-search></app-home-search>
+  <app-home-search (applied)="searchApplied($event)">
+  </app-home-search>
 
   <!-- Home list with loader -->
   <div *ngIf="(homes$ | async) as homes">

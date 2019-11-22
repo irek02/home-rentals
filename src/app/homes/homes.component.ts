@@ -36,4 +36,10 @@ export class HomesComponent implements OnInit {
 
   }
 
+  searchApplied($event) {
+
+    this.router.navigate(['homes'], { queryParams: { search: $event } });
+
+  }
+
 }
