@@ -10,6 +10,7 @@ export class HomesComponent implements OnInit {
 
   homeTypeDropdownOpen = false;
   currentHomeTypeFilters = [];
+  currentSearch = '';
   homes$ = this.dataService.homes$;
 
   constructor(
@@ -25,6 +26,7 @@ export class HomesComponent implements OnInit {
       const searchString = params.search || '';
       this.dataService.loadHomes(homeTypeFilters, searchString);
       this.currentHomeTypeFilters = homeTypeFilters;
+      this.currentSearch = searchString;
     });
 
 

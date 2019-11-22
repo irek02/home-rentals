@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class HomeSearchComponent implements OnInit {
 
+  @Input() defaultSearch;
   @Output() applied = new EventEmitter();
   form: FormGroup;
 
@@ -15,7 +16,7 @@ export class HomeSearchComponent implements OnInit {
   ngOnInit() {
 
     this.form = this.formBuilder.group({
-      search: []
+      search: [this.defaultSearch]
     });
 
     this.form.get('search').valueChanges.subscribe(value => {
