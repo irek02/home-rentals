@@ -4,48 +4,37 @@
   <!-- Filter buttons -->
   <div class="uk-flex uk-grid-small uk-margin">
     <div>
-      <button
-        (click)="homeTypeDropdownOpen = !homeTypeDropdownOpen"
-        [ngClass]="{ 'uk-button-primary': currentHomeTypeFilters.length > 0 }"
-        class="uk-button uk-button-default uk-button-small uk-text-nowrap">
+      <button (click)="homeTypeDropdownOpen = !homeTypeDropdownOpen" [ngClass]="{ 'uk-button-primary': currentHomeTypeFilters.length > 0 }" class="uk-button uk-button-default uk-button-small uk-text-nowrap">
         Home type
       </button>
-      <div *ngIf="homeTypeDropdownOpen"
-        class="uk-dropdown uk-open uk-width-medium">
-        <app-home-type-filter
-          [defaultFilters]="currentHomeTypeFilters"
-          (applied)="homeTypeFilterApplied($event)">
+      <div *ngIf="homeTypeDropdownOpen" class="uk-dropdown uk-open uk-width-medium">
+        <app-home-type-filter [defaultFilters]="currentHomeTypeFilters" (applied)="homeTypeFilterApplied($event)">
         </app-home-type-filter>
       </div>
     </div>
     <div>
-      <button
-        class="uk-button uk-button-default uk-button-small uk-text-nowrap">
+      <button class="uk-button uk-button-default uk-button-small uk-text-nowrap">
         Dates
       </button>
     </div>
     <div>
-      <button
-        class="uk-button uk-button-default uk-button-small uk-text-nowrap">
+      <button class="uk-button uk-button-default uk-button-small uk-text-nowrap">
         Guests
       </button>
     </div>
   </div>
 
-  <app-home-search [defaultSearch]="currentSearch"
-    (applied)="searchApplied($event)">
+  <app-home-search [defaultSearch]="currentSearch" (applied)="searchApplied($event)">
   </app-home-search>
 
   <!-- Home list with loader -->
   <div *ngIf="(homes$ | async) as homes">
 
     <ng-container *ngIf="homes.loading">
-      <div uk-spinner="ratio: 3"
-        class="uk-align-center uk-text-center"></div>
+      <div uk-spinner="ratio: 3" class="uk-align-center uk-text-center"></div>
     </ng-container>
 
-    <ng-container
-      *ngIf="!homes.loading && homes.data.length === 0">
+    <ng-container *ngIf="!homes.loading && homes.data.length === 0">
       <div class="uk-align-center uk-text-center">No homes
         found.</div>
     </ng-container>
@@ -57,14 +46,14 @@
             <img src="{{ home.image_url }}">
           </div>
           <div class="uk-card-body uk-padding-remove">
-            <div
-              class="uk-text-muted uk-text-uppercase uk-text-small uk-text-bold uk-text-truncate">
+            <div class="uk-text-muted uk-text-uppercase uk-text-small uk-text-bold uk-text-truncate">
               {{ home.type }} / {{ home.location }}
             </div>
             <div class="uk-text-bold">
               {{ home.title }}
             </div>
           </div>
+          <div class="uk-card-footer"><a [routerLink]="['/booking', home.id]">Book</a></div>
         </div>
       </div>
     </div>

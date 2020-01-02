@@ -1,0 +1,17 @@
+<div class="uk-container uk-padding">
+  <div *ngIf="(home$ | async) as home">
+    <ng-container *ngIf="home.loading">
+      <div uk-spinner="ratio: 3" class="uk-align-center uk-text-center"></div>
+    </ng-container>
+    <ng-container *ngIf="home.data">
+      {{ home.data.title }}
+    </ng-container>
+  </div>
+  <hr>
+  Title
+  Price per night
+  Enter check in
+  Enter check out
+  Show total
+  Show booking button
+</div>

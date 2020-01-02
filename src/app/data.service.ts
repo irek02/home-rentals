@@ -9,6 +9,7 @@ import { BehaviorSubject } from 'rxjs';
 export class DataService {
 
   homes$ = new BehaviorSubject({ loading: true, data: [] });
+  home$ = new BehaviorSubject({ loading: true, data: null });
 
   constructor(private httpClient: HttpClient) { }
 
@@ -37,6 +38,26 @@ export class DataService {
       )
       .subscribe(homes => {
         this.homes$.next({ loading: false, data: homes });
+      });
+
+  }
+
+  loadHome(id) {
+
+    this.home$.next({ loading: true, data: null });
+
+    this.httpClient.get<any[]>('assets/homes.json')
+      .pipe(
+        delay(2000),
+        map(homes => {
+          if (!id) {
+            return homes;
+          }
+          return homes.filter(home => home.id === parseInt(id, null));
+        }),
+      )
+      .subscribe(homes => {
+        this.home$.next({ loading: false, data: homes[0] });
       });
 
   }
