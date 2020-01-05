@@ -8,6 +8,11 @@ import { HomeTypeFilterComponent } from './home-type-filter/home-type-filter.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeSearchComponent } from './home-search/home-search.component';
 import { BookingComponent } from './booking/booking.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { BookingComponent } from './booking/booking.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    MatInputModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

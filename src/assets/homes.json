@@ -4,69 +4,79 @@
     "image_url": "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=500&q=80",
     "type": "Apartment",
     "location": "New York",
-    "title": "Superb duplex apartment in the historical centre"
+    "title": "Superb duplex apartment in the historical centre",
+    "price": 190
   },
   {
     "id": 2,
     "image_url": "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&w=500&q=80",
     "type": "House",
     "location": "San Francisco",
-    "title": "Charming house with woodstove"
+    "title": "Charming house with woodstove",
+    "price": 180
   },
   {
     "id": 3,
     "image_url": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=500&q=80",
     "type": "Room",
     "location": "New York",
-    "title": "Nice Clean Room in Brownstone Studio"
+    "title": "Nice Clean Room in Brownstone Studio",
+    "price": 170
   },
   {
     "id": 4,
     "image_url": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=500&q=80",
     "type": "Room",
     "location": "San Francisco",
-    "title": "Bright and Sunny Shared Room in Downtown"
+    "title": "Bright and Sunny Shared Room in Downtown",
+    "price": 190
   },
   {
     "id": 5,
     "image_url": "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&w=500&q=80",
     "type": "House",
     "location": "Boston",
-    "title": "Cape Cod Style House on South Shore"
+    "title": "Cape Cod Style House on South Shore",
+    "price": 210
   },
   {
     "id": 6,
     "image_url": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=500&q=80",
     "type": "Room",
     "location": "San Francisco",
-    "title": "Large Private Room Facing Golden Bridge"
+    "title": "Large Private Room Facing Golden Bridge",
+    "price": 205
   },
   {
     "id": 7,
     "image_url": "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&w=500&q=80",
     "type": "House",
     "location": "New York",
-    "title": "Single Family House in Quincy"
+    "title": "Single Family House in Quincy",
+    "price": 200
   },
   {
     "id": 8,
     "image_url": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&w=500&q=80",
     "type": "Room",
     "location": "Boston",
-    "title": "Small Clean Room near Boston University in Brookline"
+    "title": "Small Clean Room near Boston University in Brookline",
+    "price": 180
   },
   {
     "id": 9,
     "image_url": "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&w=500&q=80",
     "type": "House",
     "location": "San Francisco",
-    "title": "Beach House near Restaurants"
+    "title": "Beach House near Restaurants",
+    "price": 190
   },
   {
     "id": 10,
     "image_url": "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=500&q=80",
     "type": "Apartment",
     "location": "New York",
-    "title": "Rustic Apartment in Downtown"
+    "title": "Rustic Apartment in Downtown",
+    "price": 160
   }
 ]
