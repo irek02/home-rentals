@@ -1,60 +1,79 @@
-<div class="uk-container uk-container-xsmall uk-margin-large-top">
+<div class="uk-container uk-container-xsmall uk-margin-large-top uk-margin-large-bottom">
 
   <div class="uk-card uk-card-default">
-    <div class="uk-card-header">
-      <h1>Post a home for rent</h1>
+    <div class="uk-card-header uk-background-primary uk-light">
+      <h2 class="uk-h2">Post a home for rent</h2>
     </div>
     <div class="uk-card-body">
-      <form class="uk-form-horizontal uk-margin-large">
+      <form class="uk-form-horizontal uk-margin-large" [formGroup]="form">
 
-        <div class="uk-margin-large">
-          <label class="uk-form-label uk-text-bold" for="form-horizontal-text">Home title</label>
+        {{ form.value | json }}
+
+        <div class="uk-margin">
+          <label class="uk-form-label uk-text-bold" for="home_title">Home title</label>
           <div class="uk-form-controls">
-            <input class="uk-input" id="form-horizontal-text" type="text" placeholder="">
+            <input class="uk-input" id="home_title" type="text" [formControlName]="'home_title'">
           </div>
         </div>
 
-        <!-- <div class="uk-margin-large">
-      <label class="uk-form-label uk-text-bold" for="form-horizontal-select">Home type</label>
-      <div class="uk-form-controls">
-        <select class="uk-select" id="form-horizontal-select">
-          <option>House</option>
-          <option>Apartment</option>
-          <option>Room</option>
-        </select>
-      </div>
-    </div> -->
-
-        <div class="uk-margin-large">
+        <div class="uk-margin">
           <div class="uk-form-label uk-text-bold">Home type</div>
-          <div class="uk-form-controls uk-form-controls-text">
-            <label><input class="uk-radio" type="radio" name="house-type" value="house"> House</label><br>
-            <label><input class="uk-radio" type="radio" name="house-type" value="apartment"> Apartment</label><br>
-            <label><input class="uk-radio" type="radio" name="house-type" value="room"> Room</label><br>
+          <div class="uk-form-controls uk-form-controls-text uk-flex uk-flex-column">
+            <label>
+              <input
+                class="uk-radio"
+                type="radio"
+                name="home_type"
+                value="house"
+                [formControlName]="'home_type'">
+              House
+            </label>
+            <label>
+              <input
+                class="uk-radio"
+                type="radio"
+                name="home_type"
+                value="apartment"
+                [formControlName]="'home_type'">
+              Apartment
+            </label>
+            <label>
+              <input
+                class="uk-radio"
+                type="radio"
+                name="home_type"
+                value="room"
+                [formControlName]="'home_type'">
+              Room
+            </label>
           </div>
         </div>
 
-        <div class="uk-margin-large">
-          <label class="uk-form-label uk-text-bold" for="form-horizontal-text">Image URL</label>
+        <div class="uk-margin">
+          <label class="uk-form-label uk-text-bold" for="home_image_url">Image URL</label>
           <div class="uk-form-controls">
-            <input class="uk-input" id="form-horizontal-text" type="text" placeholder="">
+            <input
+              class="uk-input"
+              id="home_image_url"
+              type="text"
+              [formControlName]="'home_image_url'">
           </div>
         </div>
 
-        <div class="uk-margin-large">
-          <label class="uk-form-label uk-text-bold" for="form-horizontal-text">Price per night in USD</label>
+        <div class="uk-margin">
+          <label class="uk-form-label uk-text-bold" for="home_price">Price per night</label>
           <div class="uk-form-controls">
-            <input class="uk-input" id="form-horizontal-text" type="text" placeholder="">
+            <input class="uk-input" id="home_price" type="text" [formControlName]="'home_price'">
           </div>
         </div>
 
-        <div class="uk-margin-large">
+        <div class="uk-margin" [formGroupName]="'home_amenities'">
           <span class="uk-form-label uk-text-bold">Amenities</span>
-          <div class="uk-form-controls">
-            <label><input class="uk-checkbox" type="checkbox"> Fireplace</label><br>
-            <label><input class="uk-checkbox" type="checkbox"> Wifi</label><br>
-            <label><input class="uk-checkbox" type="checkbox"> Heating</label><br>
-            <label><input class="uk-checkbox" type="checkbox"> A/C</label><br>
+          <div class="uk-form-controls uk-flex uk-flex-column">
+            <label><input class="uk-checkbox" type="checkbox" [formControlName]="'fireplace'"> Fireplace</label>
+            <label><input class="uk-checkbox" type="checkbox" [formControlName]="'wifi'"> Wifi</label>
+            <label><input class="uk-checkbox" type="checkbox" [formControlName]="'heating'"> Heating</label>
+            <label><input class="uk-checkbox" type="checkbox" [formControlName]="'ac'"> A/C</label>
           </div>
         </div>
 
