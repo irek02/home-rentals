@@ -1,18 +1,32 @@
 <div class="uk-container uk-container-xsmall uk-margin-large-top uk-margin-large-bottom">
 
-  <div class="uk-card uk-card-default">
-    <div class="uk-card-header uk-background-primary uk-light">
-      <h2 class="uk-h2">Post a home for rent</h2>
-    </div>
-    <div class="uk-card-body">
-      <form class="uk-form-horizontal uk-margin-large" [formGroup]="form">
-
-        {{ form.value | json }}
+  <form class="uk-form-horizontal uk-margin-large" [formGroup]="form">
+    <div class="uk-card uk-card-default">
+      <div class="uk-card-header uk-background-primary uk-light">
+        <h2 class="uk-h2">Post a home for rent</h2>
+      </div>
+      <div class="uk-card-body">
 
         <div class="uk-margin">
           <label class="uk-form-label uk-text-bold" for="home_title">Home title</label>
           <div class="uk-form-controls">
-            <input class="uk-input" id="home_title" type="text" [formControlName]="'home_title'">
+            <input
+              class="uk-input"
+              id="home_title"
+              type="text"
+              [ngClass]="{ 'uk-form-danger': homeTitle.invalid && (homeTitle.dirty || homeTitle.touched) }"
+              [formControlName]="'home_title'">
+            <div *ngIf="homeTitle.invalid && (homeTitle.dirty || homeTitle.touched)">
+              <div *ngIf="homeTitle.errors?.required" class="uk-text-danger">
+                Home title is required.
+              </div>
+              <div *ngIf="homeTitle.errors?.minlength" class="uk-text-danger">
+                Home title must be at least 5 characters long.
+              </div>
+              <div *ngIf="homeTitle.errors?.maxlength" class="uk-text-danger">
+                Home title must be less than 15 characters long.
+              </div>
+            </div>
           </div>
         </div>
 
@@ -50,20 +64,28 @@
         </div>
 
         <div class="uk-margin">
-          <label class="uk-form-label uk-text-bold" for="home_image_url">Image URL</label>
+          <label class="uk-form-label uk-text-bold" for="home_price">Price per night</label>
           <div class="uk-form-controls">
             <input
               class="uk-input"
-              id="home_image_url"
+              id="home_price"
               type="text"
-              [formControlName]="'home_image_url'">
-          </div>
-        </div>
-
-        <div class="uk-margin">
-          <label class="uk-form-label uk-text-bold" for="home_price">Price per night</label>
-          <div class="uk-form-controls">
-            <input class="uk-input" id="home_price" type="text" [formControlName]="'home_price'">
+              [ngClass]="{ 'uk-form-danger': homePrice.invalid && (homePrice.dirty || homePrice.touched) }"
+              [formControlName]="'home_price'">
+            <div *ngIf="homePrice.invalid && (homePrice.dirty || homePrice.touched)">
+              <div *ngIf="homePrice.errors?.required" class="uk-text-danger">
+                Home price is required.
+              </div>
+              <div *ngIf="homePrice.errors?.pattern" class="uk-text-danger">
+                Home price must be numeric.
+              </div>
+              <div *ngIf="homePrice.errors?.min" class="uk-text-danger">
+                Home price must be at least $100 per night.
+              </div>
+              <div *ngIf="homePrice.errors?.max" class="uk-text-danger">
+                Home price must be under $5000 per night.
+              </div>
+            </div>
           </div>
         </div>
 
@@ -77,11 +99,11 @@
           </div>
         </div>
 
-      </form>
+      </div>
+      <div class="uk-card-footer uk-text-right">
+        <button class="uk-button uk-button-large uk-button-primary" [disabled]="form.pristine || form.invalid">Post</button>
+      </div>
     </div>
-    <div class="uk-card-footer uk-text-right">
-      <button class="uk-button uk-button-large uk-button-primary">Post</button>
-    </div>
-  </div>
+  </form>
 
 </div>
