@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { DataService } from '../data.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-homes',
@@ -12,6 +14,10 @@ export class HomesComponent implements OnInit {
   currentHomeTypeFilters = [];
   currentSearch = '';
   homes$ = this.dataService.homes$;
+  matData = new MatTableDataSource<any>([]);
+  displayedColumns = ['title'];
+
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   constructor(
     private dataService: DataService,
@@ -29,6 +35,10 @@ export class HomesComponent implements OnInit {
       this.currentSearch = searchString;
     });
 
+    this.homes$.subscribe(homes => {
+      this.matData = new MatTableDataSource<any>(homes.data);
+      this.matData.paginator = this.paginator;
+    });
 
   }
 

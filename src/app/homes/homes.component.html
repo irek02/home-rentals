@@ -50,15 +50,17 @@
         found.</div>
     </ng-container>
 
-    <div class="uk-grid-match uk-child-width-1-3@s" uk-grid>
-      <div *ngFor="let home of homes.data">
+  </div>
+
+  <table mat-table [dataSource]="matData">
+    <ng-container matColumnDef="title">
+      <td mat-cell *matCellDef="let home">
         <div class="uk-card">
           <div class="uk-card-media-top">
             <img src="{{ home.image_url }}">
           </div>
           <div class="uk-card-body uk-padding-remove">
-            <div
-              class="uk-text-muted uk-text-uppercase uk-text-small uk-text-bold uk-text-truncate">
+            <div class="uk-text-muted uk-text-uppercase uk-text-small uk-text-bold uk-text-truncate">
               {{ home.type }} / {{ home.location }}
             </div>
             <div class="uk-text-bold">
@@ -66,8 +68,10 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </td>
+    </ng-container>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 
 </div>
